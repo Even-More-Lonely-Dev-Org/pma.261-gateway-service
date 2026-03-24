@@ -10,10 +10,10 @@ spring:
           globalcors:
             corsConfigurations:
               '[/**]':
-                allowedOrigins: ${CORS_ALLOWED_ORIGINS:*}
+                allowedOrigins: ${CORS_ALLOWED_ORIGINS}
                 allowedHeaders: "*"
                 allowedMethods: "*"
-                allowCredentials: ${CORS_ALLOW_CREDENTIALS:true}
+                allowCredentials: ${CORS_ALLOWED_CREDENTIALS}
 
           routes:
 
@@ -31,4 +31,8 @@ spring:
               uri: http://auth:8080 # hostname da maquina
               predicates:
                 - Path=/auth/**
-            
+
+  logging:
+    level:
+      root: info
+      store: debug

@@ -1,2 +1,3 @@
-store\gateway\GatewayApplication.class
 store\gateway\GatewayResource.class
+store\gateway\security\RouterValidator.class
+store\gateway\GatewayApplication.class
