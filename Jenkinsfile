@@ -5,11 +5,6 @@ pipeline {
         NAME = "cynthiayasutake/${env.SERVICE}" // Docker Hub repository name
     }
     stages {
-        stage('Dependecies') {
-            steps {
-                build job: 'account', wait: true
-            }
-        }
         stage('Build') { 
             steps {
                 sh 'mvn -B -DskipTests clean package'
